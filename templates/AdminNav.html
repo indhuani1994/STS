@@ -1,0 +1,38 @@
+<!-- Navbar Start -->
+<div class="container-fluid bg-white sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+            <a href="{% url 'Home' %}" class="navbar-brand d-lg-none">
+                <h1 class="fw-bold m-0">STS</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="{% url 'AdminHome' %}" class="nav-item nav-link active">Home</a>
+                    <a href="#about" class="nav-item nav-link">Course</a>
+                    <a href="{% url 'AddPlacement' %}" class="nav-item nav-link">Placement</a>
+                    <a href="project.html" class="nav-item nav-link">Projects</a>
+                    <a href="" class="nav-item nav-link">Student</a>
+                    <a href="project.html" class="nav-item nav-link">Gallery</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Staff</a>
+                        <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                            <a href="" class="dropdown-item">Add</a>
+                            <a href="" class="dropdown-item">Attendance</a>
+                            <a href="" class="dropdown-item">Payroll</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Reviews</a>
+                </div>
+                <div class="ms-auto d-none d-lg-block">
+                    <a href="{% url 'Login' %}" class="btn btn-primary rounded-pill py-2 px-3"><i class="fa fa-sign-out"></i>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->

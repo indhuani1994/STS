@@ -1,0 +1,57 @@
+{% extends "MasterTemplate.html" %}
+{% block title %}
+STS_Placement
+{% endblock %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h1 class="display-2 text-white mb-4 animated slideInDown">Placed Students</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center mb-0">
+
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="display-5 mb-5">Our Expert Students</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+            {% for i in data %}
+           
+            {% if forloop.counter0|divisibleby:3 %}
+            </div><br><div class="row">
+            {% endif %}
+            
+              <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="/static/Student/{{i.photo}}" alt="Avatar" style="width:300px;height:300px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h2>{{i.name}}</h2>
+                        <img class="img-fluid mb-4" style="width:100px;height:100px" src="/static/logo/{{i.clogo}}" alt="{{i.cname}}"> 
+                        <b><p id="p1" style="color:rgb(255, 255, 255);"> @{{i.city}} <br>({{i.package}} LPA/Annum)</p>
+                      </b></div>
+                    </div>
+                  </div>
+                
+              </div>
+            {% endfor %} 
+          </div>
+        
+  
+<!-- Team End -->
+{% endblock %}
